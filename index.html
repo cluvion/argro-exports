@@ -455,13 +455,103 @@ footer .f-right{text-align:right;}
 footer .f-conf{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--gold2);margin-bottom:6px;font-weight:600;}
 footer .f-note{font-size:12px;color:rgba(248,245,239,0.35);}
 
+/* ─────────── PACKAGE CARDS ─────────── */
+.pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px;}
+.pkg-card{border-radius:20px;overflow:hidden;border:1px solid var(--border);position:relative;}
+.pkg-card.pkg-pro{border-color:rgba(212,160,23,0.4);}
+.pkg-badge{
+  position:absolute;top:20px;right:20px;font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;
+  background:var(--gold2);color:var(--ink);
+}
+.pkg-head{padding:36px 40px 28px;}
+.pkg-head.pkg-starter{background:var(--ink);}
+.pkg-head.pkg-pro-head{background:linear-gradient(135deg,var(--emerald) 0%,#0d3d24 100%);}
+.pkg-tier{font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:10px;display:block;}
+.pkg-starter .pkg-tier{color:rgba(248,245,239,0.4);}
+.pkg-pro-head .pkg-tier{color:rgba(212,160,23,0.8);}
+.pkg-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#f8f5ef;margin-bottom:6px;}
+.pkg-tagline{font-size:12.5px;color:rgba(248,245,239,0.5);margin-bottom:28px;line-height:1.6;}
+.pkg-price-row{display:flex;align-items:flex-end;gap:8px;}
+.pkg-price{font-family:'JetBrains Mono',monospace;font-size:52px;font-weight:500;color:var(--gold2);line-height:1;}
+.pkg-price-k{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:500;color:var(--gold2);margin-bottom:6px;}
+.pkg-per{font-size:13px;color:rgba(248,245,239,0.4);margin-bottom:8px;}
+.pkg-body{padding:32px 40px;background:var(--white);}
+.pkg-section-label{
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;
+  color:var(--emerald);margin-bottom:14px;padding-bottom:10px;
+  border-bottom:2px solid var(--emerald-pale);display:flex;align-items:center;gap:8px;
+}
+.pkg-section-label.gold{color:var(--gold);border-bottom-color:var(--gold-pale);}
+.pkg-section-label.royal{color:#3b69c0;border-bottom-color:#dbeafe;}
+.pkg-items{list-style:none;margin-bottom:24px;}
+.pkg-items li{
+  font-size:13px;color:var(--slate);padding:8px 0;
+  border-bottom:1px dashed var(--border);display:flex;gap:10px;align-items:flex-start;
+}
+.pkg-items li:last-child{border-bottom:none;}
+.pkg-items li .chk{color:var(--emerald);font-size:14px;flex-shrink:0;margin-top:1px;}
+.pkg-items li strong{color:var(--ink);}
+.pkg-breakdown{background:var(--paper);border-radius:12px;padding:20px;margin-top:8px;}
+.pkg-breakdown-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--slate);margin-bottom:14px;}
+.pkg-br-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);}
+.pkg-br-row:last-child{border-bottom:none;padding-bottom:0;}
+.pkg-br-row.subtotal{border-top:2px solid var(--border);margin-top:4px;padding-top:10px;}
+.pkg-br-label{font-size:12.5px;color:var(--slate);}
+.pkg-br-label small{display:block;font-size:10.5px;color:rgba(74,85,104,0.65);margin-top:1px;}
+.pkg-br-val{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--emerald);font-weight:500;white-space:nowrap;}
+.pkg-br-row.subtotal .pkg-br-label{font-weight:700;color:var(--ink);}
+.pkg-br-row.subtotal .pkg-br-val{color:var(--gold);font-size:15px;}
+.pkg-content-box{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;
+}
+.pkg-content-item{
+  background:var(--ink);border-radius:10px;padding:16px 14px;text-align:center;
+}
+.pkg-content-item .ci-num{
+  font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:500;
+  color:var(--gold2);display:block;line-height:1;
+}
+.pkg-content-item .ci-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(248,245,239,0.45);margin-top:6px;font-weight:600;}
+.pkg-adspend-note{
+  margin-top:20px;background:var(--rust-pale);border:1px solid rgba(181,74,26,0.15);
+  border-radius:10px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start;
+}
+.pkg-adspend-note span{font-size:18px;flex-shrink:0;}
+.pkg-adspend-note p{font-size:12.5px;color:var(--slate);margin:0;line-height:1.6;}
+.pkg-compare{margin-top:36px;background:var(--ink);border-radius:20px;overflow:hidden;}
+.pkg-compare-head{
+  padding:28px 40px;background:linear-gradient(90deg,var(--emerald),var(--ink2));
+  display:flex;align-items:center;gap:16px;
+}
+.pkg-compare-head h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:#f8f5ef;font-weight:600;}
+.pkg-compare-table{width:100%;border-collapse:collapse;}
+.pkg-compare-table th{
+  padding:14px 24px;font-size:10px;text-transform:uppercase;letter-spacing:2px;
+  font-weight:700;color:rgba(248,245,239,0.4);text-align:left;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.pkg-compare-table th:last-child,.pkg-compare-table th:nth-last-child(2){text-align:center;}
+.pkg-compare-table td{
+  padding:14px 24px;font-size:13px;color:rgba(248,245,239,0.7);
+  border-bottom:1px solid rgba(255,255,255,0.06);vertical-align:middle;
+}
+.pkg-compare-table tr:last-child td{border-bottom:none;}
+.pkg-compare-table td:last-child,.pkg-compare-table td:nth-last-child(2){text-align:center;}
+.pkg-compare-table .yes{color:#4ade80;font-size:16px;}
+.pkg-compare-table .no{color:rgba(248,245,239,0.2);font-size:16px;}
+.pkg-compare-table tr.total-row td{background:rgba(212,160,23,0.07);font-weight:700;}
+.pkg-compare-table tr.total-row td:nth-last-child(2),.pkg-compare-table tr.total-row td:last-child{
+  font-family:'JetBrains Mono',monospace;font-size:18px;color:var(--gold2);
+}
+
 /* ─────────── RESPONSIVE ─────────── */
 @media(max-width:960px){
   .cover{grid-template-columns:1fr;}
   .cover-right{display:none;}
   .wrap,.wrap-sm,.snav{padding-left:24px;padding-right:24px;}
   .ov-grid,.video-type-grid,.kpi-grid{grid-template-columns:1fr 1fr;}
-  .svc-body.two-col,.svc-body.three-col,.terms-grid,.tl-grid{grid-template-columns:1fr;}
+  .svc-body.two-col,.svc-body.three-col,.terms-grid,.tl-grid,.pkg-grid,.pkg-content-box{grid-template-columns:1fr;}
   .tl-grid::before{display:none;}
   .asset-grid{grid-template-columns:1fr 1fr;}
   .budget-top{grid-template-columns:1fr;}
@@ -559,14 +649,14 @@ footer .f-note{font-size:12px;color:rgba(248,245,239,0.35);}
       <div class="ov-label">Target Region</div>
     </div>
     <div class="ov-card c3">
-      <div class="ov-icon">📦</div>
-      <div class="ov-val">7</div>
-      <div class="ov-label">Products Promoted</div>
+      <div class="ov-icon">💰</div>
+      <div class="ov-val"><sup>₹</sup>40K</div>
+      <div class="ov-label">Starter Package</div>
     </div>
     <div class="ov-card c4">
-      <div class="ov-icon">📋</div>
-      <div class="ov-val">3</div>
-      <div class="ov-label">Core Services</div>
+      <div class="ov-icon">🚀</div>
+      <div class="ov-val"><sup>₹</sup>60K</div>
+      <div class="ov-label">Growth Package</div>
     </div>
   </div>
 
@@ -905,8 +995,6 @@ footer .f-note{font-size:12px;color:rgba(248,245,239,0.35);}
         <p>European keyword targeting · EN/DE/FR SEO · 7 Product Landing Pages · Monthly Ongoing</p>
       </div>
     </div>
-      </div>
-    </div>
 
     <div class="svc-body two-col">
       <div>
@@ -1088,7 +1176,7 @@ footer .f-note{font-size:12px;color:rgba(248,245,239,0.35);}
   <!-- Video Production Plan Table -->
   <div style="margin-top:40px;">
     <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--ink);margin-bottom:6px;">Monthly Video <em style="font-style:italic;color:var(--emerald);">Deliverables</em></h3>
-    <p style="font-size:13.5px;color:var(--slate);margin-bottom:0;">Recommended video output per month based on campaign goals. Total: <strong style="color:var(--ink);">12 videos/month</strong> across all formats.</p>
+    <p style="font-size:13.5px;color:var(--slate);margin-bottom:0;">6 AI Reels / Faceless / UGC videos delivered every month as part of both packages — across these formats.</p>
 
     <table class="video-plan-table">
       <thead>
@@ -1147,14 +1235,14 @@ footer .f-note{font-size:12px;color:rgba(248,245,239,0.35);}
         </tr>
         <tr style="background:var(--gold-pale);font-weight:700;">
           <td colspan="3" style="font-size:14px;color:var(--ink);font-weight:700;">📹 Total Monthly Video Output</td>
-          <td><span class="qty-badge" style="background:var(--emerald);color:white;border-color:var(--emerald);font-weight:700;">12</span></td>
+          <td><span class="qty-badge" style="background:var(--emerald);color:white;border-color:var(--emerald);font-weight:700;">6</span></td>
         </tr>
       </tbody>
     </table>
 
     <div style="background:var(--ink);border-radius:14px;padding:24px 28px;margin-top:20px;">
       <h4 style="color:var(--gold2);font-size:14px;margin-bottom:10px;">💡 Video Notes</h4>
-      <p style="font-size:12.5px;color:rgba(248,245,239,0.6);line-height:1.7;">All videos include script writing, editing, captions, music, and 1 revision round. Videos are produced in English. Multi-language variants available on request.</p>
+      <p style="font-size:12.5px;color:rgba(248,245,239,0.6);line-height:1.7;">All videos include script writing, editing, captions, music, and 1 revision round. Videos are produced in English. Arabic/Hindi subtitles or voiceover available on request. 6 AI Reels / Faceless / UGC videos are included every month in both packages.</p>
     </div>
   </div>
 </div>
@@ -1165,131 +1253,208 @@ footer .f-note{font-size:12px;color:rgba(248,245,239,0.35);}
 <div class="wrap-sm" id="budget">
   <div class="sec-eye">08 · Investment Summary</div>
   <h2>Choose Your <em>Package</em></h2>
-  <p class="lead" style="margin-bottom:0;">Two simple monthly packages. Pick the one that fits your growth goal — everything is transparent with no hidden fees.</p>
+  <p class="lead" style="margin-bottom:0;">Two simple, transparent packages. Both include content creation every month — 12 posters + 6 AI reels. Pick the plan that fits your current growth stage.</p>
 
   <!-- Package Cards -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;">
+  <div class="pkg-grid">
 
-    <!-- Package 1 — ₹40,000 -->
-    <div style="background:var(--white);border:2px solid var(--border);border-radius:20px;overflow:hidden;">
-      <div style="background:var(--ink);padding:32px 36px;">
-        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:700;margin-bottom:12px;">Package 01</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#f8f5ef;margin-bottom:6px;">Export <em style="font-style:italic;color:var(--gold2);">Starter</em></div>
-        <div style="font-size:13px;color:rgba(248,245,239,0.5);margin-bottom:24px;">Core digital marketing — leads, SEO & ads</div>
-        <div style="display:flex;align-items:flex-end;gap:8px;">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:48px;font-weight:500;color:var(--gold2);line-height:1;">₹40K</span>
-          <span style="font-size:13px;color:rgba(248,245,239,0.4);margin-bottom:10px;">/month</span>
-        </div>
-        <div style="font-size:11px;color:rgba(248,245,239,0.3);margin-top:8px;">+ ₹30,000 one-time setup in Month 1</div>
-      </div>
-      <div style="padding:28px 36px;">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--slate);margin-bottom:20px;">What's Included</div>
-
-        <div class="price-row" style="margin-bottom:8px;">
-          <div><div class="pr-label">📢 Meta Ads Management</div><div class="pr-note">Campaign setup, optimization, weekly monitoring & 8 ad creatives/month</div></div>
-          <div class="pr-val">₹15,000</div>
-        </div>
-        <div class="price-row" style="margin-bottom:8px;">
-          <div><div class="pr-label">🔍 International SEO Management</div><div class="pr-note">On-page updates, rank tracking, keyword monitoring & monthly reporting</div></div>
-          <div class="pr-val">₹8,000</div>
-        </div>
-        <div class="price-row" style="margin-bottom:8px;">
-          <div><div class="pr-label">✍️ SEO Blog Content — 4 Posts/Month</div><div class="pr-note">1,200–1,500 words each, fully EU keyword-optimized</div></div>
-          <div class="pr-val">₹6,000</div>
-        </div>
-        <div class="price-row" style="margin-bottom:8px;">
-          <div><div class="pr-label">🔗 Link Building — 8 Backlinks/Month</div><div class="pr-note">DA 30–70 quality links from food & trade industry sites</div></div>
-          <div class="pr-val">₹4,000</div>
-        </div>
-        <div class="price-row" style="margin-bottom:8px;">
-          <div><div class="pr-label">🔵 LinkedIn B2B Outreach</div><div class="pr-note">300–500 EU importer connections + 8 posts + InMail campaigns</div></div>
-          <div class="pr-val">₹5,000</div>
-        </div>
-        <div class="price-row" style="margin-bottom:20px;">
-          <div><div class="pr-label">💬 Email + WhatsApp Campaigns</div><div class="pr-note">2 email campaigns + nurture sequence + WhatsApp broadcasts</div></div>
-          <div class="pr-val">₹2,000</div>
-        </div>
-
-        <div class="price-row total">
-          <div><div class="pr-label">Monthly Total</div><div class="pr-note" style="color:rgba(248,245,239,0.35);">Excludes Meta ad spend (paid directly to Meta)</div></div>
-          <div class="pr-val">₹40,000</div>
+    <!-- STARTER: ₹40K -->
+    <div class="pkg-card">
+      <div class="pkg-head pkg-starter">
+        <span class="pkg-tier">Package 01 · Starter</span>
+        <div class="pkg-name">SMM + Meta Ads</div>
+        <div class="pkg-tagline">Social media management &amp; paid lead generation campaigns targeting European B2B buyers on Facebook &amp; Instagram.</div>
+        <div class="pkg-price-row">
+          <div class="pkg-price">₹40</div>
+          <div class="pkg-price-k">K</div>
+          <div class="pkg-per">&nbsp;/ month</div>
         </div>
       </div>
-    </div>
+      <div class="pkg-body">
 
-    <!-- Package 2 — ₹60,000 -->
-    <div style="background:var(--white);border:2px solid var(--emerald);border-radius:20px;overflow:hidden;position:relative;">
-      <div style="position:absolute;top:20px;right:20px;background:var(--gold2);color:var(--ink);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;padding:5px 14px;border-radius:20px;">Most Popular</div>
-      <div style="background:var(--emerald);padding:32px 36px;">
-        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(248,245,239,0.5);font-weight:700;margin-bottom:12px;">Package 02</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#f8f5ef;margin-bottom:6px;">Export <em style="font-style:italic;color:var(--gold2);">Pro</em></div>
-        <div style="font-size:13px;color:rgba(248,245,239,0.5);margin-bottom:24px;">Full-scale campaign with video production</div>
-        <div style="display:flex;align-items:flex-end;gap:8px;">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:48px;font-weight:500;color:var(--gold2);line-height:1;">₹60K</span>
-          <span style="font-size:13px;color:rgba(248,245,239,0.4);margin-bottom:10px;">/month</span>
-        </div>
-        <div style="font-size:11px;color:rgba(248,245,239,0.3);margin-top:8px;">+ ₹30,000 one-time setup in Month 1</div>
-      </div>
-      <div style="padding:28px 36px;">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--slate);margin-bottom:20px;">What's Included</div>
-
-        <!-- Everything from Package 1 -->
-        <div style="background:var(--emerald-pale);border:1px solid rgba(26,92,56,0.15);border-radius:10px;padding:14px 18px;margin-bottom:12px;display:flex;align-items:center;gap:12px;">
-          <span style="font-size:18px;">✅</span>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:var(--emerald);">Everything in Export Starter</div>
-            <div style="font-size:11px;color:var(--slate);margin-top:2px;">Meta Ads · SEO · Blogs · Links · LinkedIn · Email & WhatsApp</div>
+        <!-- Content deliverables -->
+        <div class="pkg-section-label royal">📦 Monthly Content Deliverables</div>
+        <div class="pkg-content-box">
+          <div class="pkg-content-item">
+            <span class="ci-num">12</span>
+            <span class="ci-label">Designed Posters</span>
           </div>
-          <div style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;color:var(--emerald);">₹40,000</div>
+          <div class="pkg-content-item">
+            <span class="ci-num">6</span>
+            <span class="ci-label">AI Reels / Faceless / UGC</span>
+          </div>
         </div>
 
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--emerald);margin:18px 0 12px;">+ Pro Add-Ons</div>
+        <!-- What's included -->
+        <div class="pkg-section-label" style="margin-top:20px;">✅ Services Included</div>
+        <ul class="pkg-items">
+          <li><span class="chk">✓</span><span><strong>Social Media Management</strong> — Feed planning, content calendar, scheduling &amp; engagement across Instagram &amp; Facebook</span></li>
+          <li><span class="chk">✓</span><span><strong>Meta Ads Management</strong> — Campaign setup, B2B audience targeting (EU + UK), weekly optimisation &amp; monthly report</span></li>
+          <li><span class="chk">✓</span><span><strong>Ad Copywriting</strong> — English copy for all ad creatives; A/B testing of headlines &amp; CTAs</span></li>
+          <li><span class="chk">✓</span><span><strong>Lead Form Setup</strong> — Native Meta lead forms + WhatsApp click-to-chat integration</span></li>
+          <li><span class="chk">✓</span><span><strong>Retargeting Campaigns</strong> — Re-engage website visitors &amp; warm video viewers</span></li>
+          <li><span class="chk">✓</span><span><strong>Monthly Performance Report</strong> — Ad spend, CPL, CTR, reach &amp; engagement breakdown</span></li>
+        </ul>
 
-        <div class="price-row" style="margin-bottom:8px;">
-          <div><div class="pr-label">🎬 Video Production — 8 Videos/Month</div><div class="pr-note">4 product showcases (Faceless) + 2 AI UGC buyer pitch + 2 AI ad creatives</div></div>
-          <div class="pr-val" style="color:var(--emerald);">₹14,000</div>
-        </div>
-        <div class="price-row" style="margin-bottom:8px;">
-          <div><div class="pr-label">🎯 Advanced Retargeting Campaigns</div><div class="pr-note">Lookalike audiences, retargeting funnels & A/B creative testing</div></div>
-          <div class="pr-val" style="color:var(--emerald);">₹4,000</div>
-        </div>
-        <div class="price-row" style="margin-bottom:20px;">
-          <div><div class="pr-label">📞 Bi-Weekly Strategy Calls</div><div class="pr-note">Dedicated account review, campaign pivots & priority support</div></div>
-          <div class="pr-val" style="color:var(--emerald);">₹2,000</div>
+        <!-- Price breakdown -->
+        <div class="pkg-breakdown">
+          <div class="pkg-breakdown-title">💰 Price Breakdown</div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">Social Media Management<small>Content calendar, scheduling, engagement</small></div>
+            <div class="pkg-br-val">₹10,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">Meta Ads Management<small>Campaign setup, targeting, A/B testing, weekly optimisation</small></div>
+            <div class="pkg-br-val">₹12,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">12 Designed Posters/Month<small>Product posts, brand graphics, promotional creatives</small></div>
+            <div class="pkg-br-val">₹10,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">6 AI Reels / Faceless / UGC Videos<small>Short-form video content for Reels, Stories &amp; Meta Ads</small></div>
+            <div class="pkg-br-val">₹8,000</div>
+          </div>
+          <div class="pkg-br-row subtotal">
+            <div class="pkg-br-label">Total Monthly Investment</div>
+            <div class="pkg-br-val">₹40,000 / mo</div>
+          </div>
         </div>
 
-        <div class="price-row total" style="background:var(--emerald);border-color:var(--emerald);">
-          <div><div class="pr-label">Monthly Total</div><div class="pr-note" style="color:rgba(248,245,239,0.35);">Excludes Meta ad spend (paid directly to Meta)</div></div>
-          <div class="pr-val">₹60,000</div>
+        <!-- Ad spend note -->
+        <div class="pkg-adspend-note">
+          <span>⚠️</span>
+          <p><strong style="color:var(--rust);">Ad Spend is separate</strong> — paid directly by you to Meta. Recommended: <strong>₹20,000–₹40,000/month</strong> for EU-wide B2B targeting. This goes 100% to Meta, not to us.</p>
         </div>
+
       </div>
     </div>
 
-  </div>
+    <!-- PRO: ₹60K -->
+    <div class="pkg-card pkg-pro">
+      <div class="pkg-badge">Most Complete</div>
+      <div class="pkg-head pkg-pro-head">
+        <span class="pkg-tier">Package 02 · Growth</span>
+        <div class="pkg-name">SMM + Meta Ads + SEO</div>
+        <div class="pkg-tagline">Everything in the ₹40K plan, plus full website SEO to rank on Google across Europe — long-term organic leads alongside paid campaigns.</div>
+        <div class="pkg-price-row">
+          <div class="pkg-price">₹60</div>
+          <div class="pkg-price-k">K</div>
+          <div class="pkg-per">&nbsp;/ month</div>
+        </div>
+      </div>
+      <div class="pkg-body">
 
-  <!-- One-time setup note -->
-  <div style="background:var(--gold-pale);border:1px solid rgba(184,134,11,0.25);border-radius:14px;padding:24px 28px;margin-top:24px;display:flex;gap:16px;align-items:flex-start;">
-    <span style="font-size:24px;">🛠️</span>
-    <div>
-      <h4 style="font-size:14px;font-weight:700;color:var(--gold);margin-bottom:8px;">One-Time Setup Fee — ₹30,000 (Month 1 only · Both Packages)</h4>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px;">
-        <div style="font-size:12px;color:var(--ink);display:flex;gap:6px;"><span style="color:var(--gold);">→</span>Meta Pixel + Account Setup — ₹8,000</div>
-        <div style="font-size:12px;color:var(--ink);display:flex;gap:6px;"><span style="color:var(--gold);">→</span>SEO Technical Audit & Setup — ₹7,000</div>
-        <div style="font-size:12px;color:var(--ink);display:flex;gap:6px;"><span style="color:var(--gold);">→</span>7 Product Landing Pages — ₹8,000</div>
-        <div style="font-size:12px;color:var(--ink);display:flex;gap:6px;"><span style="color:var(--gold);">→</span>LinkedIn Profile + ICP Strategy — ₹4,000</div>
-        <div style="font-size:12px;color:var(--ink);display:flex;gap:6px;"><span style="color:var(--gold);">→</span>WhatsApp Business API Setup — ₹3,000</div>
+        <!-- Content deliverables -->
+        <div class="pkg-section-label royal">📦 Monthly Content Deliverables</div>
+        <div class="pkg-content-box">
+          <div class="pkg-content-item">
+            <span class="ci-num">12</span>
+            <span class="ci-label">Designed Posters</span>
+          </div>
+          <div class="pkg-content-item">
+            <span class="ci-num">6</span>
+            <span class="ci-label">AI Reels / Faceless / UGC</span>
+          </div>
+        </div>
+
+        <!-- What's included -->
+        <div class="pkg-section-label" style="margin-top:20px;">✅ Everything in ₹40K, Plus:</div>
+        <ul class="pkg-items">
+          <li><span class="chk">✓</span><span><strong>Social Media Management</strong> — All SMM services from Starter plan included</span></li>
+          <li><span class="chk">✓</span><span><strong>Meta Ads Management</strong> — Full paid campaign management included</span></li>
+          <li><span class="chk">✓</span><span><strong>Website SEO (European)</strong> — On-page optimisation, keyword targeting for EU markets (EN/DE/FR)</span></li>
+          <li><span class="chk">✓</span><span><strong>Technical SEO Fixes</strong> — Page speed, hreflang, schema markup, Core Web Vitals</span></li>
+          <li><span class="chk">✓</span><span><strong>4 SEO Blog Posts/Month</strong> — 1,200–1,500 word keyword-optimised articles for European buyers</span></li>
+          <li><span class="chk">✓</span><span><strong>Link Building — 8 Backlinks/Month</strong> — DA 30–70 links from food &amp; trade industry sites</span></li>
+          <li><span class="chk">✓</span><span><strong>Keyword Rank Tracking</strong> — Weekly rank updates for 40+ EU buyer-intent keywords</span></li>
+          <li><span class="chk">✓</span><span><strong>Google Search Console + Bing Setup</strong> — Full indexing &amp; performance monitoring</span></li>
+        </ul>
+
+        <!-- Price breakdown -->
+        <div class="pkg-breakdown">
+          <div class="pkg-breakdown-title">💰 Price Breakdown</div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">Social Media Management<small>Content calendar, scheduling, engagement</small></div>
+            <div class="pkg-br-val">₹10,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">Meta Ads Management<small>Campaign setup, targeting, optimisation</small></div>
+            <div class="pkg-br-val">₹12,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">12 Designed Posters/Month<small>Product posts, brand graphics, promotional creatives</small></div>
+            <div class="pkg-br-val">₹10,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">6 AI Reels / Faceless / UGC Videos<small>Short-form video for Reels, Stories &amp; Meta Ads</small></div>
+            <div class="pkg-br-val">₹8,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">Website SEO Management<small>On-page SEO, keyword tracking, rank monitoring</small></div>
+            <div class="pkg-br-val">₹8,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">SEO Content — 4 Blog Posts/Month<small>Keyword-optimised articles targeting EU buyers</small></div>
+            <div class="pkg-br-val">₹6,000</div>
+          </div>
+          <div class="pkg-br-row">
+            <div class="pkg-br-label">Link Building — 8 Backlinks/Month<small>DA 30–70 food &amp; trade industry backlinks</small></div>
+            <div class="pkg-br-val">₹6,000</div>
+          </div>
+          <div class="pkg-br-row subtotal">
+            <div class="pkg-br-label">Total Monthly Investment</div>
+            <div class="pkg-br-val">₹60,000 / mo</div>
+          </div>
+        </div>
+
+        <!-- Ad spend note -->
+        <div class="pkg-adspend-note">
+          <span>⚠️</span>
+          <p><strong style="color:var(--rust);">Ad Spend is separate</strong> — paid directly by you to Meta. Recommended: <strong>₹20,000–₹40,000/month</strong> for EU-wide B2B targeting. This goes 100% to Meta, not to us.</p>
+        </div>
+
       </div>
     </div>
+
+  </div><!-- /pkg-grid -->
+
+  <!-- Comparison Table -->
+  <div class="pkg-compare">
+    <div class="pkg-compare-head">
+      <span style="font-size:24px;">⚖️</span>
+      <h3>Package Comparison</h3>
+    </div>
+    <table class="pkg-compare-table">
+      <thead>
+        <tr>
+          <th style="width:50%;">Feature / Service</th>
+          <th>₹40K — Starter</th>
+          <th>₹60K — Growth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Social Media Management (SMM)</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td>Meta Ads Campaign Management</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td>12 Designed Posters / Month</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td>6 AI Reels / Faceless / UGC Videos / Month</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td>Lead Forms + WhatsApp Click-to-Chat</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td>Retargeting Campaigns</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td>Monthly Performance Report</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td style="color:rgba(248,245,239,0.4);">Website SEO (European Markets)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td style="color:rgba(248,245,239,0.4);">4 SEO Blog Posts / Month</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td style="color:rgba(248,245,239,0.4);">Link Building — 8 Backlinks/Month</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td style="color:rgba(248,245,239,0.4);">Keyword Rank Tracking (40+ EU Keywords)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+        <tr><td style="color:rgba(248,245,239,0.4);">Google Search Console + Bing Setup</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+        <tr class="total-row">
+          <td style="color:#f8f5ef;font-size:14px;">Monthly Investment (excl. ad spend)</td>
+          <td>₹40,000</td>
+          <td>₹60,000</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <!-- Ad spend note -->
-  <div style="background:var(--rust-pale);border:1px solid rgba(181,74,26,0.2);border-radius:12px;padding:20px 24px;margin-top:16px;display:flex;gap:16px;align-items:flex-start;">
-    <span style="font-size:22px;">⚠️</span>
-    <div>
-      <h4 style="font-size:14px;font-weight:700;color:var(--rust);margin-bottom:6px;">Ad Spend — Paid Directly to Meta (Not Included in Either Package)</h4>
-      <p style="font-size:13px;color:var(--slate);margin:0;line-height:1.7;">Ad spend runs directly from your Meta account — 100% goes to reach EU buyers. <strong>Recommended: ₹20,000–₹40,000/month</strong> for strong EU-targeted reach. This is separate from our fees.</p>
-    </div>
-  </div>
 </div>
 
 <div class="section-sep"></div>
